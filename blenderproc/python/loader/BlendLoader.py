@@ -101,7 +101,7 @@ def load_blend(path: str, obj_types: Optional[Union[List[str], str]] = None, nam
 class _BlendLoader:
     valid_data_blocks = [collection.lower() for collection in dir(bpy.data) if
                         isinstance(getattr(bpy.data, collection), bpy.types.bpy_prop_collection)]
-    valid_object_types = ['mesh', 'curve', 'surface', 'meta', 'font', 'hair', 'pointcloud', 'volume', 'gpencil',
+    valid_object_types = ['mesh', 'curves', 'surface', 'meta', 'font', 'hair', 'pointcloud', 'volume', 'gpencil',
                           'armature', 'lattice', 'empty', 'light', 'light_probe', 'camera', 'speaker']
 
     @staticmethod
